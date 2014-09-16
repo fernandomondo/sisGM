@@ -38,7 +38,7 @@ class Orcamento{
 		$this->valorBase = $valorBase;
 	}
 	
-	public function getAirBag(){
+	public function hasAirBag(){
 		return $this->airBag;
 	}
 	
@@ -46,7 +46,7 @@ class Orcamento{
 		$this->airBag = $airBag;
 	}
 	
-	public function getDirecaoHidraulica(){
+	public function hasDirecaoHidraulica(){
 		return $this->direcaoHidraulica;
 	}
 	
@@ -54,7 +54,7 @@ class Orcamento{
 		$this->direcaoHidraulica = $direcaoHidraulica;
 	}
 	
-	public function getAbs(){
+	public function hasAbs(){
 		return $this->abs;
 	}
 	
@@ -62,14 +62,37 @@ class Orcamento{
 		$this->abs = $abs;
 	}
 	
-	public function getGps(){
+	public function hasGps(){
 		return $this->gps;
 	}
 	
 	public function setGps($gps){
 		$this->gps = $gps;
 	}
-	
+		
+	public function salvar(){
+				
+		$arquivo =  fopen("dados.txt", "a+");	
+		
+		$acessorios = "";
+		
+		if($this->hasAirBag())
+		$acessorios .= "airbag || ";
+		
+		if($this->hasDirecaoHidraulica())
+		$acessorios .= "direcaoHidraulica || ";
+		
+		if($this->hasAbs())
+		$acessorios .= "Abs || ";
+		
+		if($this->hasGps())
+		$acessorios .= "Gps";
+		
+		
+		fwrite($arquivo, $this->valorBase . "||" . $this->modelo . "||" . $acessorios . "\r\n");
+		fclose($arquivo);   	
+		
+	}
 	
 }
 

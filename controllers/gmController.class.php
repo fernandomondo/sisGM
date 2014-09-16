@@ -12,14 +12,21 @@ class GmController {
 	public function executePost() {
 
 		$orcamento = new Orcamento();
-		$orcamento->setMarca($_POST[""]);
+		$orcamento->setMoledo($_POST["modelo"]);
+		$orcamento->setCodVeiculo($_POST["nrVeiculo"]);
+		$orcamento->setValorBase($_POST["valorBase"]);
+		$orcamento->setAirBag(isset ($_POST["airBag"]));
+		$orcamento->setDirecaoHidraulica(isset ($_POST["direcaoHidraulica"]));
+		$orcamento->setAbs(isset ($_POST["abs"]));
+		$orcamento->setGps(isset ($_POST["gps"]));
 
 		$validator = new OrcamentoValidator();
-		$errors = validator . validate(orcamento);
+		$errors = validator->validate($orcamento);
 
 		if (count($errors) > 0)
 			return ViewData($orcamento, $errors);
 
+		$orcamento->salvar();
 	}
 
 }
