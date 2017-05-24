@@ -52,7 +52,7 @@ else
         </label>
 		
 		  <label for="gps" class="radio-inline">
-         Gps <input name="gps" id="gps" value="<?php echo  $viewData->Model->hasGps()  ?>" type="radio"> AirBag
+         Moto Gps <input name="gps" id="gps" value="<?php echo  $viewData->Model->hasGps()  ?>" type="radio"> AirBag
         </label>
 		
 	</fieldset>	
