@@ -44,7 +44,7 @@ else
         </label>
         
        <label for="direcaoHidraulica" class="radio-inline">
-         Direções Hidraulicas <input name="direcaoHidraulica" id="direcaoHidraulica" value="<?php echo  $viewData->Model->hasDirecaoHidraulica()  ?>" type="radio"> AirBag
+         Directions Hidraulicas <input name="direcaoHidraulica" id="direcaoHidraulica" value="<?php echo  $viewData->Model->hasDirecaoHidraulica()  ?>" type="radio"> AirBag
         </label>
                 
         <label for="abs" class="radio-inline">
@@ -52,7 +52,7 @@ else
         </label>
 		
 		  <label for="gps" class="radio-inline">
-         Moto Gps <input name="gps" id="gps" value="<?php echo  $viewData->Model->hasGps()  ?>" type="radio"> AirBag
+         Gps <input name="gps" id="gps" value="<?php echo  $viewData->Model->hasGps()  ?>" type="radio"> AirBag
         </label>
 		
 	</fieldset>	
