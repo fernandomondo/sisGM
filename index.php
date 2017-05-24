@@ -14,7 +14,7 @@ else
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Language" content="en" />	
-	<title>Orçamento</title>
+	<title>OrÃ§amento</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 <body>
@@ -22,7 +22,7 @@ else
 <form action="index.php" method="post">
 	
 	<div class="form-group">
-		<label	for="nrVeiculo" >Nrº Veículo</label>
+		<label	for="nrVeiculo" >NrÂº VeÃ­culo</label>
      	<input type="text" class="form-control" name="nrVeiculo" id="nrVeiculo" value="<?php if(isset($viewData->Model->getcodVeiculo())) echo  $viewData->Model->getcodVeiculo() ?>" />
 	</div>
 	
@@ -32,19 +32,19 @@ else
 	</div>
 	
 	<div class="form-group">
-		<label	for="valorBasico" >Valor básico</label>
+		<label	for="valorBasico" >Valor bÃ¡sico</label>
      	<input type="text" class="form-control" name="valorBasico" id="valorBasico" value="<?php if(isset($viewData->Model->getValorBase())) echo  $viewData->Model->getValorBase() ?>" />
 	</div>
 		
 	<fieldset>
-		<legend>Acessórios</legend>
+		<legend>AcessÃ³rios</legend>
 		
 		<label for="airBag" class="radio-inline">
-         AirBag <input name="airBag" id="airBag" value="<?php echo  $viewData->Model->hasAirBag()  ?>" type="radio"> 
+         AirBags <input name="airBag" id="airBag" value="<?php echo  $viewData->Model->hasAirBag()  ?>" type="radio"> 
         </label>
         
        <label for="direcaoHidraulica" class="radio-inline">
-         Direção Hidraulica <input name="direcaoHidraulica" id="direcaoHidraulica" value="<?php echo  $viewData->Model->hasDirecaoHidraulica()  ?>" type="radio"> AirBag
+         DireÃ§Ã£o Hidraulica <input name="direcaoHidraulica" id="direcaoHidraulica" value="<?php echo  $viewData->Model->hasDirecaoHidraulica()  ?>" type="radio"> AirBag
         </label>
                 
         <label for="abs" class="radio-inline">
