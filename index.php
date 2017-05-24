@@ -40,11 +40,11 @@ else
 		<legend>Acessórios</legend>
 		
 		<label for="airBag" class="radio-inline">
-         AirBags <input name="airBag" id="airBag" value="<?php echo  $viewData->Model->hasAirBag()  ?>" type="radio"> 
+         AirBag <input name="airBag" id="airBag" value="<?php echo  $viewData->Model->hasAirBag()  ?>" type="radio"> 
         </label>
         
        <label for="direcaoHidraulica" class="radio-inline">
-         Direção Hidraulica <input name="direcaoHidraulica" id="direcaoHidraulica" value="<?php echo  $viewData->Model->hasDirecaoHidraulica()  ?>" type="radio"> AirBag
+         Direções Hidraulicas <input name="direcaoHidraulica" id="direcaoHidraulica" value="<?php echo  $viewData->Model->hasDirecaoHidraulica()  ?>" type="radio"> AirBag
         </label>
                 
         <label for="abs" class="radio-inline">
