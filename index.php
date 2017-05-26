@@ -1,5 +1,5 @@
 <?php
-//26/04/2017 14:14:01
+//26/04/2017 14:18:01
 include_once ("controllers/gmController.class.php");
 
 $controller = new GMController();
